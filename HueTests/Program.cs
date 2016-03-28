@@ -7,7 +7,8 @@ namespace HueTests
         static void Main(string[] args)
         {
             var bridge = Hue.HueBridgeLocator.Locate();
-            Console.WriteLine((bridge == null) ? "Bridge was not found." : "Bridge found at " + bridge.IP);
+            var message = (bridge == null) ? "Bridge was not found." : "Bridge found at " + bridge.IP;
+            Console.WriteLine(message);
 
             if (bridge != null)
             {
